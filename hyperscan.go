@@ -1,3 +1,8 @@
+/*
+Sniperkit-Bot
+- Status: analyzed
+*/
+
 // Copyright 2017 The go-hyperscan Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
@@ -18,7 +23,10 @@ package hyperscan
 #include "cgo_helpers.h"
 */
 import "C"
-import "unsafe"
+
+import (
+	"unsafe"
+)
 
 // Compile function as declared in hs/hs_compile.h:346
 func Compile(expression string, flags uint32, mode uint32, platform *PlatformInfo, db **Database, error **CompileError) int32 {
